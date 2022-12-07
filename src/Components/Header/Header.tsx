@@ -2,9 +2,9 @@ import { AppDispatch, RootState } from "configStore";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfile } from "Slices/profileSlice";
-import facebook from "Assets/image/facebook.svg";
-import instagram from "Assets/image/instagram.svg";
-import tiktok from "Assets/image/tiktok.svg";
+import facebook from "Assets/images/facebook.svg";
+import instagram from "Assets/images/instagram.svg";
+import tiktok from "Assets/images/tiktok.svg";
 
 const Header = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -16,8 +16,6 @@ const Header = () => {
     return () => {};
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  console.log(2);
 
   return (
     <div

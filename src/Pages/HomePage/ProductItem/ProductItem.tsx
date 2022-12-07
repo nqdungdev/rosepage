@@ -1,4 +1,5 @@
 import { IProduct } from "Interfaces/productInterface";
+import { memo } from "react";
 
 type Props = {
   product: IProduct;
@@ -13,10 +14,23 @@ const ProductItem = ({ product }: Props) => {
           alt={product.image_link}
           className="border-solid border-[1px] rounded-md"
         />
-        <div className="text-secondary text-sm">{product.product_name}</div>
+        <div
+          className="text-secondary text-sm mt-1"
+          style={{
+            wordBreak: "break-word",
+            overflow: "hidden",
+            display: "-webkit-box",
+            textOverflow: "ellipsis",
+            WebkitBoxOrient: "vertical",
+            WebkitLineClamp: 2,
+            letterSpacing: "-.2px",
+          }}
+        >
+          {product.product_name}
+        </div>
       </a>
     </div>
   );
 };
 
-export default ProductItem;
+export default memo(ProductItem);
